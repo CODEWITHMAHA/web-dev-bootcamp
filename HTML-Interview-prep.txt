@@ -1,0 +1,50 @@
+Q1:What is the Difference Between Inline and Block Elements?
+
+Ans: Block elements occupy the full available width and start on a new line, while inline elements only take up as much space as needed and don’t break the line. Block elements structure the layout; inline elements style or format content within those blocks.
+
+Example:
+<p> is a block element — it starts on a new line.(<div>, <p>, <h1>–<h6>, <section>, <article>)
+<span> is an inline element — it stays within the same line.(<span>, <a>, <strong>, <em>, <img>)
+
+Q2:What is semantic Tags?
+
+Ans: In HTML5, semantic tags clearly describe their meaning and purpose to both the browser and developers.
+They can be either block-level or inline-level, depending on how they behave in layout.Its improve accessibility and SEO by giving clear context to browsers and screen readers.
+
+Example: <header>, <footer>, <section>, <article>, <aside>, <nav>, <main>
+
+Q3: what is the difference between inline semantic tags and block semantic tags?
+
+Ans: Block semantic tags define the structure or layout sections of a webpage, while inline semantic tags define the meaning or emphasis of content within those sections. Both improve accessibility and SEO by giving clear context to browsers and screen readers
+
+Examples:
+<article> and <header> → Block semantic tags (define structure)
+<strong>, <em>, <time> → Inline semantic tags (add meaning to specific words)
+
+Q4:what is the difference between the <em> tag and <i> tag?
+
+Ans:Both <em> and <i> display text in italics by default, but <em> carries semantic meaning — it emphasizes text for accessibility and SEO — while <i> is purely presentational.
+
+Example:
+<em> → adds semantic emphasis → “really” is stressed in meaning.
+<i> → just italic style → “carpe diem” is shown in italics but not emphasized.
+
+Q5:what is the difference between the <strong > tag and <b> tag?
+
+Ans:Both <strong> and <b> make text bold, but <strong> adds semantic meaning — it indicates importance and improves accessibility — while <b> only affects the visual style.
+
+Examples:
+<strong> → conveys importance (semantic + visual).
+<b> → just makes the text bold (visual only).
+
+Q6:what is the difference between tags and elements?
+
+Ans:A tag is just the markup identifier like <p> or </p>, while an element is the complete unit that includes the opening tag, the content, and the closing tag. Every element is made up of tags, but not every tag by itself is an element.
+
+Example:
+<p> and </p> are tags.
+<p>This is a paragraph.</p> is an element.
+
+
+
+
