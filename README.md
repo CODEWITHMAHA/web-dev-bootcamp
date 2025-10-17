@@ -2,10 +2,7 @@
 📖 Overview
 
 This project is a simple HTML-based educational webpage that provides an overview of Frontend Development and its core technologies — HTML, CSS, and JavaScript.
-###Desktop view
-<p align="center">
-  <img src="./images/Desktop-view.png" alt="Desktop-view">  
-</p>
+
 
 The page is designed using basic HTML elements and inline CSS for simplicity. It also includes images and links to external resources for better understanding.
 🧠 What You’ll Learn
