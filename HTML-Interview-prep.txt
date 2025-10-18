@@ -45,6 +45,65 @@ Example:
 <p> and </p> are tags.
 <p>This is a paragraph.</p> is an element.
 
+Q7: What are attributes?
+
+Ans: Attributes provide additional information about HTML elements. They are always included in the opening tag and written as name–value pairs, like href="https://example.com" in an <a> tag.
+
+Example: <img src="logo.png" alt="Company Logo" width="200" height="100">
+
+Q8: What are Global Attributes?
+
+Ans: Global attributes are common attributes that can be applied to any HTML element to control behavior, styling, or interaction — such as id, class, style, title, and data-*.
+
+Q9: What Are Custom Attributes in HTML?
+
+Ans: Custom attributes (also called data attributes) are user-defined attributes that allow developers to store extra information (metadata) directly in HTML elements.
+They always start with the prefix data- followed by your chosen name.
+
+Example: <div data-user="maha" data-role="admin"></div>
+         Here: data-user and data-role are custom attributes.
+               You can access them later in JavaScript or CSS.
+
+🧩 Example: Using Custom Attributes in a Real Project
+
+    Imagine you’re building an e-commerce website with multiple products displayed on a page.
+    You can use custom attributes to store hidden product data that JavaScript can later use — for example, product ID, price, or category.   
+
+Custom attributes (data-*) are used to store additional information directly in HTML elements.
+They don’t affect layout or style but make it easy for JavaScript to access and manipulate that data dynamically — for example, when handling product info or theme toggles    
+
+Q10: What is the diggerence between Custom Attributes and Global Attributes?
+
+Ans: Custom attributes (data-*) are developer-defined attributes used to store extra information about an element for use in JavaScript, while global attributes are predefined by HTML and control common behavior or styling for all elements.
+
+Q11: How do Global and Custom Attributes Both Include data-* Attributes?
+
+      The short answer:
+      ✅ data-* attributes are both global and custom attributes.
+      Here’s why and how 👇
+
+      🧩 1. data-* Attributes Are Defined as Global in the HTML5 Specification
+
+            According to the HTML5 standard, all attributes starting with data- are considered part of the global attribute set.
+            That means:
+
+            You can use a data-* attribute on any HTML element — just like other global attributes (id, class, style, etc.).
+
+            So technically, data-* attributes belong to the global attributes category because they are universally valid for all elements.
+
+      🧠 2. But They’re Also Called “Custom Attributes”
+
+            Even though they are part of global attributes, data-* attributes are customizable by the developer — meaning:
+
+            You can define your own names after data-
+            The browser doesn’t have predefined meanings for them
+            They exist only to store developer-specific data  
+
+            For example: <div data-user="maha" data-theme="dark"></div>
+
+    ⚡ Interview Tip:
+
+         data-* attributes are a special type of global attribute. They’re considered global because you can use them on any element, but they’re also custom because developers define their own names and values to store extra information for scripts.”        
 
 
 
