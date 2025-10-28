@@ -1,0 +1,154 @@
+💬 Top CSS Selector Interview Questions (with Answers)
+🔹 1. What are CSS selectors?
+
+Answer:
+Selectors are patterns used to target HTML elements and apply CSS styles to them.
+Example:
+
+p { color: red; }
+
+
+This targets all <p> elements.
+
+.
+
+🔹 2. What is the difference between class selector and ID selector?
+
+Answer:
+
+Feature	Class Selector (.classname)	ID Selector (#idname)
+Symbol	.	#
+Usage	Can be used on multiple elements	Used on only one element
+Specificity	Lower specificity	Higher specificity
+Example	.btn { color: red; }	#header { color: blue; }
+🔹 3. Can you use multiple classes on one element?
+
+Answer:
+Yes ✅. You can assign multiple classes by separating them with spaces.
+Example:
+
+<div class="card shadow dark"></div>
+
+🔹 4. What is the difference between div p and div > p selectors?
+
+Answer:
+
+div p → selects all <p> elements inside a <div> (descendant selector).
+
+div > p → selects only direct child <p> elements of <div> (child selector).
+
+🔹 5. What is the difference between pseudo-classes and pseudo-elements?
+
+Answer:
+
+Feature	Pseudo-class	Pseudo-element
+Symbol	:	::
+Purpose	Targets state of an element	Targets part of an element
+Example	a:hover { color: red; }	p::first-line { font-weight: bold; }
+🔹 6. What does the universal selector (*) do?
+
+Answer:
+It selects every element on the page.
+Example:
+
+* { margin: 0; padding: 0; }
+
+🔹 7. What are attribute selectors?
+
+Answer:
+They select elements based on their attributes or values.
+Examples:
+
+input[type="text"] { color: blue; }
+a[target="_blank"] { color: green; }
+
+🔹 8. Can you combine multiple selectors?
+
+Answer:
+Yes ✅. You can group or combine selectors to apply the same style:
+
+h1, h2, h3 { color: purple; } /* Grouped selectors */
+
+🔹 9. What is the specificity hierarchy in CSS selectors?
+
+Answer:
+Specificity determines which CSS rule takes priority.
+Order of power (lowest → highest):
+
+Universal selector *
+
+Element selector (p, div)
+
+Class, pseudo-class, attribute selectors (.class, :hover, [type])
+
+ID selector (#id)
+
+Inline styles (style="" in HTML)
+
+!important (overrides all)
+
+🔹 10. What is a combinator in CSS?
+
+Answer:
+A combinator defines a relationship between two selectors.
+Types:
+
+descendant (A B)
+
+child (A > B)
+
+adjacent sibling (A + B)
+
+general sibling (A ~ B)
+
+Example:
+
+div + p { color: blue; } /* Targets <p> immediately after a <div> */
+
+🔹 11. What is the difference between :nth-child() and :nth-of-type()?
+
+Answer:
+
+:nth-child(n) → selects based on child position (counting all types).
+
+:nth-of-type(n) → selects based on position among the same element type.
+
+Example:
+
+p:nth-child(2) { color: red; }      /* 2nd child (whatever tag) */
+p:nth-of-type(2) { color: blue; }   /* 2nd <p> only */
+
+🔹 12. What is a descendant selector?
+
+Answer:
+Selects all elements inside a specific element (no matter how deep).
+Example:
+
+div p { color: gray; }  /* All <p> inside <div> */
+
+🔹 13. What is the difference between a:link, a:visited, a:hover, and a:active?
+
+Answer:
+These are pseudo-classes for link states:
+
+a:link { color: blue; }      /* Unvisited link */
+a:visited { color: purple; } /* Visited link */
+a:hover { color: red; }      /* When mouse is over */
+a:active { color: green; }   /* When clicked */
+
+🔹 14. What is a group selector and why use it?
+
+Answer:
+Used to reduce repetition when multiple selectors share the same style.
+
+h1, h2, h3 { font-family: Arial; }
+
+🔹 15. What is a not (:not()) selector?
+
+Answer:
+It excludes elements that match a condition.
+
+p:not(.highlight) { color: gray; }
+
+
+→ Styles all <p> except those with class “highlight”.

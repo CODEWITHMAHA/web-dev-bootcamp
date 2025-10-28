@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selectors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1 heading>CSS Selectors</h1>
+  <p class="question">Q: What are selectors?</p>
+  <p>
+    A: Selectors are used to "find" (or select) the HTML elements you want to style.
+  </p>
+  <p>
+    selector {
+    property: value;
+    }
+
+  </p>
+  <p>
+    p {
+    color: blue;
+    }
+  </p>
+  <p>This selector targets all
+  <p> elements and makes their text blue.</p>
+
+
+  <h2 id="sub-heading">Types of CSS Selectors</h2>
+  <h3 class="underline">Universal Selector</h3>
+  <p>The universal selector (*) selects all elements on the page.</p>
+  <p>Example: * { margin: 0; }</p>
+
+  <h3 class="underline">Element Selector</h3>
+  <p>Selects elements by their tag name.</p>
+  <p>Example: p { color: red; }</p>
+
+  <h3 class="underline">Class Selector</h3>
+  <p>Selects elements with a specific class.</p>
+  <p>Example: .btn { background: blue; }</p>
+
+  <h3 class="underline">ID Selector</h3>
+  <p>Selects a single element with a specific ID.</p>
+  <p>Example: #header { font-size: 20px; }</p>
+
+  <h3 class="underline">Attribute Selector</h3>
+  <p>Selects elements by attribute or value.</p>
+  <p>Example: input[type="text"] { color: green; }</p>
+
+  <h3 class="underline">Group Selector</h3>
+  <p>Applies same style to multiple selectors.</p>
+  <p>Example: h1, h2, h3 { font-family: Arial; }</p>
+
+  <h3 class="underline">Descendant Selector</h3>
+  <p>Selects elements nested inside others.</p>
+  <p>Example: div p { color: gray; }</p>
+
+  <h3 class="underline">Child Selector</h3>
+  <p>Selects direct child elements.</p>
+  <p>Example: ul > li { color: orange; }</p>
+
+  <h3 class="underline">Pseudo-class Selector</h3>
+  <p>Selects based on a specific state.</p>
+  <p>Example: a:hover { color: red; }</p>
+
+  <h3 class="underline">Pseudo-element Selector</h3>
+  <p>Styles specific parts of elements.</p>
+  <p>Example: p::first-line { font-weight: bold; }</p>
+
+  <h2>Top CSS Selector Interview Questions (with Answers)</h2>
+  <h3>🔹 1. What are CSS selectors?</h3>
+  <p>Selectors are patterns used to target HTML elements and apply CSS styles to them.</p>
+  <p>Example:p { color: red; } , This targets all
+  <p> elements.</p>
+
+  <h3>🔹 2. What is the difference between class selector and ID selector?</h3>
+  <table class="table">
+    <tr>
+      <th>Feature</th>
+      <th>Class Selector (.classname)</th>
+      <th>ID Selector (#idname)</th>
+    </tr>
+    <tr>
+      <td>Symbol</td>
+      <td>.</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Usage</td>
+      <td>Can be used on multiple elements</td>
+      <td>Used on only one element</td>
+    </tr>
+    <tr>
+      <td>Specificity</td>
+      <td>Lower specificity</td>
+      <td>Higher specificity</td>
+    </tr>
+    <tr>
+      <td>Example</td>
+      <td>.btn { color: red; }</td>
+      <td>#header { color: blue; }</td>
+    </tr>
+  </table>
+
+  <h3>🔹 3. Can you use multiple classes on one element?</h3>
+  <p>Yes, You can assign multiple classes by separating them with spaces.</p>
+  <p>Example:div class="card shadow dark">/div</p>
+
+  <h3>🔹 4. What is the difference between div p and div > p selectors?</h3>
+  <p>div p → selects all "p" elements inside a "div" (descendant selector).</p>
+  <p>div > p → selects only direct child "p" elements of "div" (child selector).</p>
+
+  
+
+
+</body>
+
+</html>

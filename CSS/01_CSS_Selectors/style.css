@@ -1,0 +1,42 @@
+* {
+  margin: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+[heading] {
+  background-color: brown;
+  text-align: center;
+  color: aliceblue;
+}
+
+.question {
+  font-weight: bold;
+  font-size: 20px;
+}
+#sub-heading {
+  color: green;
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+p:hover {
+  background-color: lightgray;
+}
+
+h2{
+  color: green;
+  font-style: italic;
+}
+.table{
+  border: 2px solid black;
+}
+.table td {
+  border: 1px solid black;
+  padding: 5px;
+}
+.table tr:nth-child(even) {
+  background-color: #c5a8a8;
+}
