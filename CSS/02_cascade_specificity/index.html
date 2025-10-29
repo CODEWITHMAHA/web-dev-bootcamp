@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cascade-Specificity</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div>
+    <h1 id="heading">Cascading</h1>
+    <p class="ans">Cascading in CSS means that when multiple CSS rules apply to the same element, the browser decides
+      which rule takes priority based on three main factors</p>
+    <ol>
+      <li>Specificity (How specific the selector is)</li>
+      <li>Source order (The rule that appears last)</li>
+      <li>Importance (If the rule uses !important)</li>
+    </ol>
+    <p class="ans">In short — the browser “cascades” through all the possible styles and chooses the most relevant one.
+    </p>
+    <p>Cascading means that when multiple CSS rules apply to the same element, the browser determines which styles to
+      apply based on priority rules — importance (!important), specificity (type, class, or ID), and source order (the
+      last rule wins). That’s why CSS is called Cascading Style Sheets</p>
+  </div>
+
+  <div>
+    <h2>Specificity</h2>
+    <p>Specificity in CSS defines which selector is stronger when multiple rules target the same element. The browser
+      assigns weight to each selector — inline styles > IDs > classes > elements. The rule with the highest specificity
+      wins unless !important is used.</p>
+  </div>
+
+  <div>
+    <h2>Inheritance</h2>
+    <p>Inheritance in CSS means that some properties are automatically passed from parent elements to child elements.
+      For example, text color and font family are inherited, but box-model properties like margin or border are not. You
+      can force inheritance using the inherit keyword</p>
+  </div>
+
+  <div>
+    <h2>Difference Between Cascade and Specificity in CSS</h2>
+    <p>The cascade in CSS is the overall process that determines which styles are applied when multiple rules target the
+      same element. It takes into account the rule’s importance (!important), specificity, and order in the stylesheet.
+    </p>
+
+    <p>Specificity is just one part of the cascade — it measures how specific a selector is. For example, an ID selector
+      is more specific than a class or element selector.</p>
+
+    <p>So, specificity is a ranking mechanism, while the cascade is the decision-making process that uses specificity
+      (along with other factors) to resolve conflicts.</p>
+  </div>
+
+</body>
+
+</html>
