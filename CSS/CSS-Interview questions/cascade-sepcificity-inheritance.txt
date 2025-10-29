@@ -1,0 +1,59 @@
+Q1:what does cascading means in css ?
+Ans: Cascading means that when multiple CSS rules apply to the same element, the browser determines which styles to apply based on priority rules — importance (!important), specificity (type, class, or ID), and source order (the last rule wins). That’s why CSS is called Cascading Style Sheets.
+
+Q2:what does specificity means?
+Ans:Specificity in CSS defines which selector is stronger when multiple rules target the same element. The browser assigns weight to each selector — inline styles > IDs > classes > elements. The rule with the highest specificity wins unless !important is used.
+
+Q3:what does Inheritance means?
+Ans:Inheritance in CSS means that some properties are automatically passed from parent elements to child elements. For example, text color and font family are inherited, but box-model properties like margin or border are not. You can force inheritance using the inherit keyword.
+
+Q4. What is the order of priority in CSS (Cascade Order)?
+Ans:Inline styles (highest)
+Internal or embedded styles (<style>)
+External stylesheet
+Browser default styles
+
+And if there’s still a conflict → !important overrides everything.
+
+Q5. What does !important do?
+Ans:It overrides all other rules, regardless of specificity or order.
+But it should be used carefully, because it can make debugging harder.
+
+Q6. What happens if two rules have the same specificity and importance?
+Ans:The last one written in the stylesheet (source order) wins.
+
+Q7. Which is stronger — an ID selector or a class selector?
+Ans:An ID selector has higher specificity than a class selector.
+
+Q8. What is the specificity of this selector?
+        div#main p.highlight
+Ans:Break it down:
+
+div → element (1)
+#main → ID (100)
+.highlight → class (10)
+
+✅ Total specificity = 111
+
+Q9. How does !important affect specificity?
+Ans:!important overrides specificity — even a low-specificity selector can win if it’s marked !important.
+
+Q10. What is the difference between cascade and inheritance?
+
+Ans:Cascade decides which rule wins when multiple styles target the same element.
+    Inheritance passes some property values from parent to child elements.
+
+Q11. Can inline styles be inherited?
+Ans:No. Inline styles apply only to that specific element — they are not inherited. 
+
+Q12. What happens if an inherited value and a directly applied value conflict?
+Ans:The directly applied rule (from the cascade) will override the inherited one.
+
+Q13. Explain the difference between Cascade, Specificity, and Inheritance.
+Answer (Interview-Perfect):
+
+Cascade is the overall process that determines which style is applied when multiple rules target the same element.
+Specificity measures how strong or precise a selector is.
+Inheritance allows certain properties to pass from parent elements to their children.
+Together, these three concepts define the final computed style of an element.
+
