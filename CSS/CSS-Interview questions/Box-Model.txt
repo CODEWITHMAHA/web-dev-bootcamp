@@ -1,0 +1,108 @@
+💬 Top Interview Questions on CSS Box Model
+🔹 1. What is the CSS Box Model?
+
+👉 Intent: Tests your conceptual clarity.
+✅ Answer (interview-ready):
+
+The CSS Box Model describes how every HTML element is represented as a rectangular box consisting of four parts — content, padding, border, and margin.
+It defines how space is calculated and how elements are sized and positioned on a webpage.
+
+🔹 2. What are the different parts of the Box Model?
+
+👉 Intent: Checks if you understand each layer.
+✅ Answer:
+
+The Box Model has four parts:
+
+Content: The actual text or image inside the box.
+
+Padding: Space between content and border (inside the box).
+
+Border: Surrounds the padding and content.
+
+Margin: Space outside the border that separates the element from others.
+
+🔹 3. What is the difference between margin and padding?
+
+👉 Intent: Basic but very frequently asked.
+✅ Answer:
+
+Padding is the space inside the element’s border, while margin is the space outside the border that separates one element from another.
+Padding affects the element’s background area; margin does not.
+
+🔹 4. How does box-sizing affect the Box Model?
+
+👉 Intent: Tests practical knowledge of layout control.
+✅ Answer:
+
+The box-sizing property determines how width and height are calculated.
+
+content-box (default): Width/height apply only to content; padding and border are added to total size.
+
+border-box: Width/height include content, padding, and border — easier for layout consistency.
+
+🔹 5. What is the default value of box-sizing and why is border-box often preferred?
+
+👉 Intent: Checks best practices.
+✅ Answer:
+
+The default value is content-box.
+Developers often prefer border-box because it makes layouts easier — the element’s total size remains fixed even when you add padding or borders.
+
+🔹 6. How are margins collapsed in CSS?
+
+👉 Intent: Tests deep understanding of layout behavior.
+✅ Answer:
+
+Margin collapsing means when two vertical margins meet (like between two paragraphs), only the larger margin is applied — they don’t add up.
+It happens between block elements, not inline elements.
+
+🔹 7. Do inline elements follow the box model?
+
+👉 Intent: Tests awareness of display behavior.
+✅ Answer:
+
+Yes, inline elements follow the box model, but vertical properties (like top/bottom margin and padding) usually don’t affect layout — only left/right ones do.
+Changing the element to display: inline-block allows vertical spacing to apply.
+
+🔹 8. How can you center a div horizontally and vertically using the box model?
+
+👉 Intent: Tests practical implementation.
+✅ Answer Example:
+
+/* Horizontal center */
+margin: 0 auto;
+
+/* Vertical + Horizontal center */
+display: flex;
+justify-content: center;
+align-items: center;
+
+🔹 9. How do borders and padding affect total width and height of an element?
+
+👉 Intent: Tests numeric understanding.
+✅ Answer:
+
+In the default content-box model:
+Total width = content + padding + border + margin
+In border-box:
+Total width = declared width (includes content + padding + border) + margin
+
+🔹 10. How do you debug or visualize the box model in the browser?
+
+👉 Intent: Tests real-world debugging experience.
+✅ Answer:
+
+You can use browser DevTools → Inspect Element → Computed tab → Box Model section.
+It visually shows margin, border, padding, and content sizes.
+
+🔹 11. What’s the difference between inline, block, and inline-block in context of the box model?
+
+👉 Intent: Checks advanced layout knowledge.
+✅ Answer:
+
+Block: Takes full width, starts on new line, box model applies fully.
+
+Inline: Takes only needed width, ignores top/bottom padding/margin.
+
+Inline-block: Behaves like inline (no line break) but respects full box model (padding, margin, border).
