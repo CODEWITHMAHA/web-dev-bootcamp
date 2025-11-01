@@ -1,0 +1,122 @@
+🧩 Question 1:Can you explain the difference between relative, absolute, fixed, and sticky positioning in CSS?
+
+1️⃣ Difference between relative, absolute, fixed, and sticky positioning
+Relative: Positioned relative to its normal position.
+Absolute: Positioned relative to the nearest positioned ancestor (removed from normal flow).
+Fixed: Positioned relative to the viewport; doesn’t move when page scrolls.
+Sticky: Behaves like relative until a scroll threshold is reached, then acts like fixed.
+
+🎨 Question 2: What are pseudo-classes and pseudo-elements?Can you give examples of each and explain their difference?
+
+Pseudo-classes vs Pseudo-elements
+
+Pseudo-class: Targets element states → :hover, :focus, :nth-child().
+Pseudo-element: Targets parts of an element → ::before, ::after, ::first-line.
+💡 One colon (:) for pseudo-class, two (::) for pseudo-element.
+
+🧱 Question 3:What is the difference between inline, block, and inline-block elements?
+
+Inline vs Block vs Inline-block
+
+Inline: Doesn’t start on a new line; can’t set width/height (<span>).
+Block: Takes full width; starts on new line (<div>, <p>).
+Inline-block: Behaves inline but allows width/height.
+
+💡 Question 4:Explain the CSS Box Model and how box-sizing affects it.
+
+Explain Box Model
+
+Every element is a box with 4 parts:
+Content → Padding → Border → Margin.
+box-sizing: border-box includes padding & border in total width/height.
+
+🧭 Question 5:What is the difference between em, rem, and px units?
+
+Difference between em, rem, and px
+
+px: Absolute unit, fixed size.
+em: Relative to parent’s font size.
+rem: Relative to root (html) font size — consistent across elements.
+
+🖌️ Question 6:How does specificity work in CSS, and how is it calculated?
+
+How specificity works
+
+CSS resolves conflicts by specificity priority:
+Inline styles (1000) > IDs (100) > Classes (10) > Elements (1).
+If equal, last declared rule wins.
+
+⚙️ Question 7:What is the z-index, and how does the stacking context work in CSS?
+
+What is z-index and stacking context
+
+z-index controls the vertical stacking order of elements.
+It only works on positioned elements (relative, absolute, fixed).
+New stacking contexts form with certain properties (e.g., position, opacity < 1, transform).
+
+🧠 Question 8:What are combinators in CSS?
+Explain types like descendant ( ), child (>), sibling (+, ~).
+
+Define relationships between selectors:
+Descendant: div p → all <p> inside <div>
+Child: div > p → direct child only
+Adjacent sibling: div + p → next sibling
+General sibling: div ~ p → all later siblings
+
+
+📦 Question 9:What’s the difference between display: none, visibility: hidden, and opacity: 0?
+
+Difference between display:none, visibility:hidden, opacity:0
+
+display:none: Removed from layout.
+visibility:hidden: Hidden but space remains.
+opacity:0: Fully transparent but still clickable and in layout.
+
+🌈 Question 10:How can you center a div horizontally and vertically in CSS?
+
+Center a div horizontally & vertically
+/* Flex method */
+display: flex;
+justify-content: center;
+align-items: center;
+
+/* Or margin auto */
+margin: 0 auto;
+
+🎯 Question 11:What is the difference between transition and animation in CSS?
+
+Transition vs Animation
+
+Transition: Changes occur on a trigger (e.g., hover).
+Animation: Runs automatically and can loop using keyframes.
+Example: @keyframes bounce { ... }
+
+⚡ Question 12:What are media queries and how are they used for responsive design?
+
+Media queries make designs responsive by applying styles based on device size or features.
+Example:@media (max-width: 768px) { ... }
+
+🔍 Question 13:What’s the difference between position: absolute and position: fixed?
+
+Difference between absolute and fixed
+
+Absolute: Positioned relative to nearest positioned ancestor.
+Fixed: Positioned relative to the viewport — stays fixed on scroll.
+
+🧩 Question 14:What are CSS variables and why are they useful?
+
+Variables (custom properties) store reusable values.
+Defined with --name and accessed using var().
+Example:
+:root { --main-color: #007bff; }
+button { color: var(--main-color); }
+
+🧱 Question 15:What’s the difference between flexbox and grid layout in CSS?
+When would you choose one over the other?
+
+Flexbox vs Grid
+
+Flexbox: 1-dimensional (row or column).
+Grid: 2-dimensional (rows & columns).
+Use Flexbox for alignment, Grid for full layouts.
+
