@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS BOX MODEL WITH INLINE ELEMENTS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>CSS BOX MODEL WITH INLINE ELEMENTS</h1>
+  <p>
+    This is an example of a paragraph with <span class="highlight">inline elements</span> that demonstrate how the CSS box model applies to them. Notice how the <span class="highlight">highlighted text</span> behaves differently compared to block-level elements in terms of spacing and layout.   
+  </p>
+
+  <span>
+    This is a span element with a background color, padding, and border. 
+    <span class="highlight">However, the height and width properties will not affect its size.</span>
+  </span>
+
+  <h2>Now its time for padding in inline elements</h2>
+  <p>
+    Here is some text with <span class="padded">padding applied to this inline element</span>. Notice how the padding affects the space around the text but does not change the overall height of the line.
+  </p>
+
+  <span class="inline-1">hello i am Mahrukh khan</span>
+  <div class="block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, ipsa.</div>
+  <span class="inline-2">Lorem ipsum dolor sit amet.</span>
+
+  <h3>Now its time for inline block</h3>
+  <span class="inline-block">This is an inline-block element. It respects width and height properties.</span>
+  <span class="inline-block">html</span>
+  <span class="inline-block">css</span>
+  <span class="inline-block">js</span>
+
+  <h1 class="highlight-heading">Replaced and non-Replaced Inline Elements</h1>
+  <div class="replaced">
+    <strong>Replaced inline elements</strong>:
+    An example of a replaced inline element is an image: <img src="https://via.placeholder.com/100" alt="">. Replaced elements have intrinsic dimensions and can be styled with width and height.
+  </div>
+  <div class="non-Replaced">
+    <strong>Non-Replaced inline elements</strong>, like this <span class="highlight">span</span>, do not have intrinsic dimensions and their size is determined by the content they contain.
+  </div>
+
+  <iframe src="https://www.youtube.com/embed/JnY16NvJbXE" title="CSS Box Model with Inline Elements | Scam of Span | Part 3 | Frontend Bootcamp Hindi | Ep.15" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</body>
+</html>
