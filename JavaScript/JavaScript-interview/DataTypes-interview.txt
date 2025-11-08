@@ -1,0 +1,624 @@
+🧠 TOP INTERVIEW QUESTIONS ON “DATA TYPES” (With Best Answers)
+
+💬 Question 1: What are the different data types in JavaScript?
+✅ Answer:
+JavaScript has 8 data types — 7 primitive types and 1 non-primitive (object) type.
+
+Primitive types:
+
+String – represents textual data ("Hello")
+Number – represents numeric values (42, 3.14)
+Boolean – true or false values
+Undefined – a variable that has been declared but not assigned
+Null – represents intentional absence of value
+Symbol – unique and immutable value introduced in ES6
+BigInt – used to represent very large integers (added in ES2020)
+
+Non-Primitive type:
+
+Object – collections of key-value pairs (including Arrays, Functions, Dates, etc.)
+
+✅ Summary line (that interviewers love):
+
+“All data types except objects are immutable and stored by value. Objects are mutable and stored by reference.”
+
+💡 Why it impresses: You show both classification and storage behavior awareness.
+
+💬 Question 2: What’s the difference between null and undefined?
+✅ Answer:
+undefined means a variable has been declared but not assigned a value.
+
+let a;
+console.log(a); // undefined
+
+null means a variable is explicitly set to have no value.
+
+let b = null;
+console.log(b); // null
+
+✅ Bonus tip line:
+
+“undefined is the default state, while null is an intentional assignment.”
+
+💡 Why it impresses: This shows you understand the semantic difference, not just the definition.
+
+💬 Question 3: What is the difference between primitive and non-primitive data types?
+✅ Answer:
+Primitive types are immutable and stored by value.
+Each variable holds its own copy.
+
+let a = 10;
+let b = a;
+b = 20;
+console.log(a); // 10
+
+Non-primitive types (objects) are mutable and stored by reference.
+
+let obj1 = { name: "Maha" };
+let obj2 = obj1;
+obj2.name = "Khan";
+console.log(obj1.name); // Khan
+
+💡 Why it impresses: You show that you understand how data is stored in memory.
+
+💬 Question 4: How can you check the data type of a variable in JavaScript?
+✅ Answer:
+You can use the typeof operator:
+
+typeof "Hello" // "string"
+typeof 10 // "number"
+typeof true // "boolean"
+typeof undefined // "undefined"
+typeof null // "object" (this is a historical bug)
+typeof Symbol() // "symbol"
+typeof 123n // "bigint"
+
+💡 Why interviewers love this:
+If you mention the typeof null bug, it shows you’ve gone beyond basic tutorial knowledge.
+
+💬 Question 5: Why does typeof null return “object”?
+✅ Answer:
+It’s a long-standing bug in JavaScript.
+When JavaScript was first created, values were stored in a way where the type tag for objects was 0.
+null was represented as a null pointer (0x00), which mistakenly got identified as an object.
+
+Even though this was recognized as an error, it remains for backward compatibility.
+
+💡 Why it impresses:
+Knowing this shows a deep understanding of JavaScript’s internals.
+
+💬 Question 6: What is type coercion in JavaScript?
+✅ Answer:
+Type coercion is JavaScript’s automatic conversion of one data type to another when performing operations between different types.
+
+Example:
+
+console.log('5' + 2); // "52" → number is converted to string (concatenation)
+console.log('5' - 2); // 3 → string is converted to number (subtraction)
+
+✅ Bonus line:
+
+“Type coercion can be implicit (automatic) or explicit (using Number(), String(), Boolean()).”
+
+💡 Why it impresses:
+This question checks your understanding of dynamic typing and automatic conversions — key JavaScript behavior.
+
+💬 Question 7: What is NaN in JavaScript?
+✅ Answer:
+NaN stands for “Not-a-Number”.
+It represents an invalid number or a failed numeric conversion.
+
+Example:
+
+Number("abc"); // NaN
+
+
+✅ Bonus facts:
+
+typeof NaN → "number" (because NaN is technically a numeric value)
+To check for NaN, use Number.isNaN(), not == or ===, because:
+
+NaN === NaN // false
+
+💡 Why it impresses:
+You demonstrate both concept knowledge and common pitfalls awareness.
+
+💬 Question 8: How does JavaScript handle dynamic typing?
+
+✅ Answer:
+JavaScript is a dynamically typed language — meaning you don’t have to declare a variable’s type.
+A variable can hold different types at different times:
+
+let data = 42; 
+data = "Hello"; 
+data = true;
+
+The interpreter determines the type at runtime, not compile time.
+
+💡 Why it impresses:
+This shows that you understand language behavior, not just syntax.
+
+🧩 TOP INTERVIEW QUESTIONS: Type Conversion & Coercion
+💬 Question 1: What is type conversion in JavaScript?
+
+✅ Answer:
+Type conversion is the process of changing a value from one data type to another.
+
+It can be of two types:
+
+Implicit Conversion (Type Coercion) – done automatically by JavaScript.
+
+Explicit Conversion – done manually by the developer using built-in functions.
+
+Example:
+
+// Implicit
+console.log('5' + 2); // "52" → Number is converted to string
+
+// Explicit
+console.log(Number('5') + 2); // 7 → String converted to number
+
+
+✅ Bonus line:
+
+“In short, coercion happens automatically, while conversion is done intentionally.”
+
+💡 Why this answer stands out:
+You define, differentiate, and give simple code — clear and professional.
+
+💬 Question 2: What is the difference between implicit and explicit type conversion?
+
+✅ Answer:
+
+Type	Description	Example
+Implicit (Type Coercion)	Automatically performed by JS when different types are used together	'5' + 2 → "52"
+Explicit (Type Conversion)	Manually done using functions	Number('5') + 2 → 7
+
+✅ Bonus phrase for the interviewer:
+
+“Implicit conversion is convenient but risky; explicit conversion is predictable and preferred in clean code.”
+
+💡 Why interviewers like it:
+You show awareness of good coding practices, not just theory.
+
+💬 Question 3: How does JavaScript handle coercion with the “+” operator?
+
+✅ Answer:
+The + operator behaves differently depending on the data types involved:
+
+If either operand is a string, JavaScript converts both to strings and concatenates them.
+
+Otherwise, it converts both to numbers and performs addition.
+
+Example:
+
+console.log('5' + 2); // "52" → String concatenation
+console.log(5 + true); // 6 → true becomes 1
+console.log('5' + true); // "5true"
+
+
+💡 Why it impresses:
+You demonstrate that you understand operator-based coercion rules, which are a common source of bugs.
+
+💬 *Question 4: What happens when you use other operators (like -, , /) with strings and numbers?
+
+✅ Answer:
+For operators other than +, JavaScript tries to convert both operands to numbers.
+
+Examples:
+
+'10' - 2  // 8
+'10' * '2'  // 20
+'10' / '2'  // 5
+'10' - 'a'  // NaN
+
+
+💡 Why interviewers ask this:
+They want to see if you understand the difference in how operators trigger coercion.
+
+💬 Question 5: What’s the output of this, and why?
+console.log(1 + '2' + 3);
+console.log(1 + +'2' + 3);
+
+
+✅ Answer:
+
+1 + '2' + 3 → "123"
+→ First, 1 + '2' becomes '12' (string concatenation), then '12' + 3 → '123'.
+
+1 + +'2' + 3 → 6
+→ +'2' converts '2' to number 2, so 1 + 2 + 3 → 6.
+
+💡 Why it impresses:
+It shows deep awareness of how coercion happens step-by-step and that you know the unary plus trick (+ before a string to convert it to a number).
+
+💬 Question 6: What values are considered “falsy” in JavaScript?
+
+✅ Answer:
+There are 7 falsy values in JavaScript:
+
+false, 0, -0, "", null, undefined, NaN
+
+
+Everything else is truthy.
+
+Example:
+
+if ("hello") console.log("truthy");
+if (0) console.log("won't run");
+
+
+💡 Why interviewers love this:
+Falsy/truthy checks are core to writing clean conditionals.
+
+💬 Question 7: What is the difference between == and === in JavaScript?
+
+✅ Answer:
+
+== (loose equality) → compares values after performing type coercion.
+
+=== (strict equality) → compares both value and type, with no coercion.
+
+Examples:
+
+'5' == 5   // true
+'5' === 5  // false
+
+
+✅ Bonus line:
+
+“Always prefer === for reliable comparisons and to avoid hidden coercion.”
+
+💡 Why it impresses:
+You show that you not only understand coercion but also follow best practices.
+
+💬 Question 8: Explain this tricky case — [] == ![]
+
+✅ Answer:
+Let’s break it down step by step:
+
+[] == ![]  // true
+
+
+![] → false (because empty arrays are truthy, negating makes it false)
+
+So we get [] == false
+
+JavaScript tries to convert [] to a primitive → '' (empty string)
+
+Then converts '' to number 0, and false to number 0
+
+So 0 == 0 → true
+
+💡 Why it’s gold:
+You show you can analyze coercion step-by-step — a skill that separates juniors from strong developers.
+
+💬 Question 9: How can you convert values explicitly to Number, String, and Boolean?
+
+✅ Answer:
+
+Conversion	Methods	Example
+To Number	Number(), parseInt(), parseFloat(), +	Number("5"), +'5'
+To String	String(), .toString()	String(123), (123).toString()
+To Boolean	Boolean(), !!	Boolean(1), !!"hello"
+
+💡 Why this matters:
+Shows you can handle data normalization in real-world code.
+
+💬 Question 10: What’s the difference between parseInt() and Number()?
+
+✅ Answer:
+
+parseInt() parses up to the first non-numeric character and returns an integer.
+
+Number() converts the entire string, and if it’s invalid, returns NaN.
+
+Example:
+
+parseInt("42px"); // 42
+Number("42px");   // NaN
+
+
+💡 Why interviewers ask this:
+It checks your practical debugging knowledge when handling user input or data parsing.
+
+🧩 TRICKY TYPE CONVERSION & COERCION QUESTIONS
+
+(With step-by-step reasoning + answers interviewers love)
+
+💬 Question 1:
+console.log('5' + 3);
+console.log('5' - 3);
+
+
+✅ Answer:
+
+'5' + 3 → "53"   // String concatenation  
+'5' - 3 → 2      // String converted to number
+
+
+🧠 Explanation:
+The + operator performs concatenation when one operand is a string.
+Other arithmetic operators (-, *, /) always convert to numbers.
+
+💡 Interviewer tip:
+They’re testing if you really know that + behaves differently than other operators.
+
+💬 Question 2:
+console.log(true + false);
+
+
+✅ Answer:
+
+1
+
+
+🧠 Explanation:
+
+true → 1
+
+false → 0
+
+1 + 0 = 1
+
+💡 What interviewer sees:
+You know Boolean-to-number coercion rules.
+
+💬 Question 3:
+console.log('10' - '4' - '3' + '2');
+
+
+✅ Answer:
+
+"32"
+
+
+🧠 Explanation:
+
+'10' - '4' → 6
+
+6 - '3' → 3
+
+3 + '2' → '32' (because + with string → concatenation)
+
+💡 What impresses interviewer:
+You handle operator precedence and mixed coercion cleanly.
+
+💬 Question 4:
+console.log(1 + '2' + 3);
+console.log(1 + +'2' + 3);
+
+
+✅ Answer:
+
+"123"
+6
+
+
+🧠 Explanation:
+
+First line: '2' turns the first + into string concatenation.
+
+Second line: +'2' converts '2' to 2, so 1 + 2 + 3 = 6.
+
+💡 Key trick: The unary plus (+) converts strings to numbers.
+
+💬 Question 5:
+console.log('5' * '2');
+console.log('5' * []);
+console.log('5' * [2]);
+
+
+✅ Answer:
+
+10
+0
+10
+
+
+🧠 Explanation:
+
+'5' * '2' → both converted to numbers → 10.
+
+[] → "" → 0.
+
+[2] → '2' → 2.
+
+💡 This tests:
+Array-to-string coercion + empty array handling.
+
+💬 Question 6:
+console.log([] + []);
+console.log([] + {});
+console.log({} + []);
+
+
+✅ Answer:
+
+""
+"[object Object]"
+0
+
+
+🧠 Explanation:
+
+[] + [] → both become empty strings → "".
+
+[] + {} → "" + "[object Object]" → "[object Object]".
+
+{} at start is treated as a block, so +[] → 0.
+
+💡 This is a classic “WTF JavaScript” question — showing you know parsing quirks.
+
+💬 Question 7:
+console.log(false == '0');
+console.log(false === '0');
+
+
+✅ Answer:
+
+true
+false
+
+
+🧠 Explanation:
+
+== → performs coercion: '0' → 0, false → 0, so equal.
+
+=== → no coercion → different types.
+
+💡 Rule: Always use === to avoid hidden coercion bugs.
+
+💬 Question 8:
+console.log(!!"false" == !!"true");
+
+
+✅ Answer:
+
+true
+
+
+🧠 Explanation:
+Both "false" and "true" are non-empty strings, hence truthy.
+!! converts to Boolean → both true.
+
+💡 Lesson: The content doesn’t matter — only if it’s empty or not.
+
+💬 Question 9:
+console.log([] == ![]);
+
+
+✅ Answer:
+
+true
+
+
+🧠 Explanation:
+
+![] → false (since [] is truthy)
+
+So [] == false
+
+[] → "" → 0, and false → 0 → true
+
+💡 Why it’s tricky:
+This is one of the most famous coercion puzzles ever used in interviews.
+
+💬 Question 10:
+console.log(null == undefined);
+console.log(null === undefined);
+
+
+✅ Answer:
+
+true
+false
+
+
+🧠 Explanation:
+
+== → considers null and undefined equal (special case in JS).
+
+=== → compares type too → they differ.
+
+💡 Interviewer insight:
+Tests if you know the only case where == is valid in real-world code.
+
+💬 Question 11:
+console.log(typeof NaN);
+console.log(NaN == NaN);
+
+
+✅ Answer:
+
+"number"
+false
+
+
+🧠 Explanation:
+
+NaN is of type number (weird but true).
+
+NaN is never equal to itself — must check with Number.isNaN().
+
+💡 Extra point:
+Mention Object.is(NaN, NaN) returns true (newer method).
+
+💬 Question 12:
+console.log('' == 0);
+console.log('' === 0);
+
+
+✅ Answer:
+
+true
+false
+
+
+🧠 Explanation:
+'' → 0 in loose equality, but types differ under strict equality.
+
+💡 Quick rule:
+== does numeric conversion if both sides can be treated as numbers.
+
+💬 Question 13:
+console.log('' == false);
+console.log(0 == false);
+
+
+✅ Answer:
+
+true
+true
+
+
+🧠 Explanation:
+
+'' → 0
+
+false → 0
+
+Both become 0, hence true.
+
+💡 Interviewer note:
+Shows understanding of coercion’s numeric pathway.
+
+💬 Question 14:
+console.log('2' > '12');
+console.log(2 > '12');
+
+
+✅ Answer:
+
+true
+false
+
+
+🧠 Explanation:
+
+'2' > '12' → string comparison, checks character by character ('2' > '1').
+
+2 > '12' → '12' converted to 12, so 2 > 12 → false.
+
+💡 Takeaway:
+String comparison is lexicographical, not numeric.
+
+💬 Question 15:
+console.log([] == 0);
+console.log(['0'] == 0);
+
+
+✅ Answer:
+
+true
+true
+
+
+🧠 Explanation:
+
+[] → "" → 0.
+
+['0'] → '0' → 0.
+
+💡 This one shows:
+How toString() and valueOf() methods work behind coercion.

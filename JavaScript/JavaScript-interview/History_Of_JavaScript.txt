@@ -1,0 +1,55 @@
+Q1:Can you tell me a brief history of JavaScript — who created it, when, and why?
+
+Ans: JavaScript was created by Brendan Eich in 1995 while he was working at Netscape Communications.
+It was originally developed in just 10 days to make web pages more interactive — allowing browsers to run code directly on the client side, rather than relying only on server-side languages like Perl or Java.
+
+Initially, it was called Mocha, then LiveScript, and finally renamed to JavaScript for marketing reasons — to leverage the popularity of Java at that time.
+
+Later, it was standardized by ECMA International under the name ECMAScript, with ECMAScript 3 (1999) being the first major version that shaped the language we know today.
+
+Today, JavaScript powers not just browsers, but also servers (Node.js), mobile apps, and even IoT devices — making it one of the most widely used languages in the world.
+
+Q2: Is JavaScript interpreted or compiled?
+
+Ans: Traditionally, JavaScript is an interpreted language, because the code was executed line by line by the browser’s JavaScript engine without a separate compilation step.
+
+However, modern JavaScript engines (like Google’s V8, SpiderMonkey, or Chakra) actually use a technique called Just-In-Time (JIT) compilation.
+
+Here’s how it works:
+
+The code is first parsed and converted into bytecode or machine code at runtime.
+Then, frequently executed parts are optimized and compiled for better performance.
+
+So today, we say JavaScript is both interpreted and compiled — interpreted at a high level, but compiled internally using JIT for speed.
+
+Q3: What is ECMAScript and how is it related to JavaScript?
+
+✅ Answer:
+ECMAScript is the official standard that defines how JavaScript should work.
+JavaScript is an implementation of the ECMAScript standard, defined by ECMA International under ECMA-262.
+Every major JavaScript engine (like V8 or SpiderMonkey) follows ECMAScript specifications to ensure consistent behavior across browsers.
+
+Q4: What is ES6 and why is it important?
+
+✅ Answer:
+ES6 (ECMAScript 2015) was a major update to JavaScript that introduced features like let/const, arrow functions, classes, template literals, modules, and promises.
+It made JavaScript more powerful, modern, and easier to write — especially for large applications.
+
+Q4: Why was JavaScript created when Java already existed?
+
+✅ Answer:
+JavaScript was designed to make web pages interactive, while Java was mainly for building applications.
+JavaScript runs directly in the browser and is easy for non-programmers to learn, while Java needs compilation and runs on the server or JVM.
+So, JavaScript was created to add client-side scripting to HTML.
+
+Q6: What was the first version of JavaScript called?
+
+✅ Answer:
+The first version was named Mocha, then renamed to LiveScript, and finally JavaScript in 1995 for marketing reasons.
+
+Q7: How did JavaScript evolve into modern frameworks like React or Node.js?
+
+✅ Answer:
+As browsers and web apps grew more complex, JavaScript evolved with new features (ES6+) and runtime environments like Node.js (2009) that allowed it to run outside browsers.
+This led to the rise of frameworks like React, Angular, and Vue, enabling JavaScript to power full-stack development.
+
