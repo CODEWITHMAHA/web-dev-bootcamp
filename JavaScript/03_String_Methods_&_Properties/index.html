@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Strings Methods and Properties</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -40,6 +41,45 @@
       console.log(str.slice(2, 7)); // "Hello"
     </code>
   </pre>
+
+  <h2>Methods without Arguments</h2>
+  <p>Some string methods do not require any arguments. Here are a few examples:</p>
+  <ul>
+    <li><strong>toLowerCase()</strong>: Converts the entire string to lowercase letters.</li>
+    <li><strong>toUpperCase()</strong>: Converts the entire string to uppercase letters.</li>
+    <li><strong>trim()</strong>: Removes whitespace from both ends of the string.</li>
+  </ul>
+
+  <h2>Methods with Arguments</h2>
+  <p>Many string methods require one or more arguments to function properly. Here are some examples:</p>
+  <ul>
+    <li><strong>charAt(index)</strong>: Requires an index argument to specify which character to return.</li>
+    <li><strong>charCodeAt</strong>:
+      <em>charCodeAt(index)</em>: Requires an index argument to return the Unicode of the character at that position.
+    </li>
+    <li><strong>replace</strong>:
+      <em>replace(oldSubstring, newSubstring)</em>: Requires two arguments: the substring to be replaced and the new
+      substring.
+    </li>
+    <li><strong>replaceAll</strong>:
+      <em>replaceAll(oldSubstring, newSubstring)</em>: Requires two arguments: the substring to be replaced and the new
+      substring.
+    </li>
+    <li><strong>padStart</strong>:
+      <em>padStart(targetLength, padString)</em>: Requires the target length and the string to pad with.
+    </li>
+    <li><strong>padEnd</strong>:
+      <em>padEnd(targetLength, padString)</em>: Requires the target length and the string to pad with.
+    </li>
+
+    <li><strong>concat(string1, string2, ...)</strong>: Requires one or more string arguments to concatenate.</li>
+    <li><strong>includes(substring)</strong>: Requires a substring argument to check for its presence in the string.
+    </li>
+    <li><strong>indexOf(substring)</strong>: Requires a substring argument to find its index in the string.</li>
+    <li><strong>slice(startIndex, endIndex)</strong>: Requires start and end index arguments to extract a portion of the
+      string.</li>
+
+  </ul>
 
 
 </body>
