@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strings Methods and Properties</title>
+</head>
+
+<body>
+  <h1>String Methods And Properties</h1>
+  <p>Strings in JavaScript come with a variety of built-in methods and properties that allow you to manipulate and
+    interact with text data easily. Here are some commonly used string methods and properties:</p>
+  <h2>Common String Methods</h2>
+  <ul>
+    <li><strong>charAt(index)</strong>: Returns the character at the specified index.</li>
+    <li><strong>concat(string1, string2, ...)</strong>: Joins two or more strings and returns a new string.</li>
+    <li><strong>includes(substring)</strong>: Checks if the string contains the specified substring and returns a
+      boolean.</li>
+    <li><strong>indexOf(substring)</strong>: Returns the index of the first occurrence of the specified substring, or -1
+      if not found.</li>
+    <li><strong>slice(startIndex, endIndex)</strong>: Extracts a section of the string and returns it as a new string.
+    </li>
+    <li><strong>toLowerCase()</strong>: Converts the entire string to lowercase letters.</li>
+    <li><strong>toUpperCase()</strong>: Converts the entire string to uppercase letters.</li>
+    <li><strong>trim()</strong>: Removes whitespace from both ends of the string.</li>
+  </ul>
+  <h2>Common String Properties</h2>
+  <ul>
+    <li><strong>length</strong>: Returns the length of the string (number of characters).</li>
+  </ul>
+  <h2>Example Usage</h2>
+  <pre>
+    <code>
+      let str = "  Hello, World!  ";
+      console.log(str.length); // 17
+      console.log(str.trim()); // "Hello, World!"
+      console.log(str.toUpperCase()); // "  HELLO, WORLD!  "
+      console.log(str.indexOf("World")); // 9
+      console.log(str.slice(2, 7)); // "Hello"
+    </code>
+  </pre>
+
+
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+💬 Question 1: What is a variable in JavaScript?
+
+✅ Answer:
+A variable in JavaScript is a named container used to store data that can be referenced and manipulated later.
+Variables allow developers to store values — such as numbers, strings, objects, or functions — and reuse them throughout the program.
+
+let name = "Maha";
+let age = 21;
+
+💡 Bonus line:
+
+“Variables act as identifiers for data in memory, enabling dynamic behavior in JavaScript since it’s a loosely typed language.”
+
+💬 Question 2: What are the different ways to declare variables in JavaScript?
+
+✅ Answer:
+JavaScript provides three keywords for declaring variables:
+
+var → Function-scoped, hoisted, can be re-declared & updated.
+
+let → Block-scoped, not hoisted in the same way, can be updated but not re-declared in the same scope.
+
+const → Block-scoped, must be initialized at declaration, cannot be updated or re-declared.
+
+💬 Question 3: What is the difference between var, let, and const?
+
+✅ Answer (interview-favorite table):
+
+Feature	var	let	const
+Scope	Function-scoped	Block-scoped	Block-scoped
+Hoisting	Yes (initialized as undefined)	Yes (but in TDZ)	Yes (but in TDZ)
+Redeclaration	Allowed	❌ Not allowed	❌ Not allowed
+Reassignment	Allowed	Allowed	❌ Not allowed
+Initialization	Optional	Optional	Mandatory
+Use Case	Legacy code	For variables that can change	For fixed values
+
+💬 Question 4: What is Hoisting? How does it work with var, let, and const?
+
+✅ Answer:
+Hoisting is JavaScript’s default behavior of moving variable and function declarations to the top of their scope during the compilation phase.
+
+However, behavior differs between var, let, and const:
+
+console.log(a); // undefined
+var a = 10;
+
+console.log(b); // ReferenceError
+let b = 20;
+
+console.log(c); // ReferenceError
+const c = 30;
+
+💡 Explanation:
+
+var is hoisted and initialized as undefined.
+
+let and const are also hoisted but remain in the Temporal Dead Zone (TDZ) until their declaration is reached — hence, accessing them earlier throws an error.
+
+💬 Bonus line:
+
+“Understanding hoisting helps prevent runtime bugs caused by accessing variables before initialization.”
+
+💬 Question 5: What is the difference between Global Scope, Function Scope, and Block Scope?
+
+✅ Answer:
+
+Global Scope:
+Accessible everywhere in the program.
+Example: variables declared outside any function/block.
+
+Function Scope:
+Variables declared with var inside a function are accessible only within that function.
+
+Block Scope:
+Variables declared with let or const inside {} are accessible only inside that block.
+
+{
+  let x = 10;
+  var y = 20;
+}
+console.log(y); // ✅ 20
+console.log(x); // ❌ ReferenceError
+
+💡 Bonus line:
+
+“Block scope introduced with let and const in ES6 made JavaScript much safer and more predictable.”
+
+💬 Question 6: What happens if you declare a variable without using var, let, or const?
+
+✅ Answer:
+If a variable is declared without any keyword, it automatically becomes a global variable — even if it’s inside a function.
+This is considered bad practice, as it can lead to bugs or accidental overwrites.
+
+function test() {
+  x = 10; // implicitly global
+}
+test();
+console.log(x); // 10
+💡 Bonus line:
+
+“Implicit globals break encapsulation, so modern JavaScript best practice is to always use let or const.”
+
+💬 Question 7: Can const objects or arrays be modified?
+
+✅ Answer:
+Yes — a const variable’s reference cannot change, but the content it points to can be modified.
+const person = { name: "Maha" };
+person.name = "Khan"; // ✅ Allowed
+// person = {}; ❌ Not allowed
+
+💡 Bonus line:
+
+“const makes the reference immutable, not the value — that’s why for full immutability, we use deep cloning or Object.freeze().”
+
+💬 Question:
+
+👉 What is the difference between function scope and block scope in JavaScript?
+
+✅ Answer (Professional & Interview-Ready):
+
+In JavaScript, scope determines where a variable is accessible in your code.
+There are two main types of local scope: function scope and block scope.
+
+🧩 1. Function Scope
+
+Variables declared with var are function-scoped.
+
+This means they are only accessible inside the function in which they are declared — not outside it.
+
+However, if var is used inside a block (like an if or for statement), it ignores the block and remains accessible throughout the entire function.
+
+🧠 Example:
+
+function test() {
+  if (true) {
+    var x = 10;
+  }
+  console.log(x); // ✅ 10 — accessible because var is function-scoped
+}
+test();
+
+
+💡 Even though x is declared inside an if block, it’s still available throughout the function.
+
+🧩 2. Block Scope
+
+Variables declared with let or const are block-scoped.
+
+A block is anything enclosed in curly braces {} — like if, for, or while.
+
+Block-scoped variables are accessible only within that block and not outside it.
+
+🧠 Example:
+
+function test() {
+  if (true) {
+    let y = 20;
+    const z = 30;
+  }
+  console.log(y); // ❌ ReferenceError
+  console.log(z); // ❌ ReferenceError
+}
+test();
+
+
+💡 y and z are not accessible outside the if block — that’s block scope.
+
+⚖️ Key Differences Table
+Feature	Function Scope (var)	Block Scope (let / const)
+Visibility	Visible throughout the entire function	Visible only inside the block {}
+Keyword	var	let, const
+Example	if, for, etc. don’t limit scope	Variables vanish outside {}
+Hoisting	Hoisted & initialized as undefined	Hoisted but in Temporal Dead Zone
+Best Practice	Avoid in modern JS	Always prefer let or const
+⚡ Bonus (Impressive Interview Line):
+
+“Before ES6, JavaScript only had function scope via var, which often caused unexpected behavior. The introduction of let and const in ES6 finally gave us true block scoping — making code safer and more predictable.”
